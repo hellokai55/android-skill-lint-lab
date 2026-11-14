@@ -1,0 +1,24 @@
+{
+  "sample_kind": "reference_implementation_not_model",
+  "is_model_ab": false,
+  "counts": {
+    "lint_xml": "app/build/reports/lint-results-debug.xml",
+    "tracked_issue_counts": {
+      "AdaptiveScreenOrientationLock": 0,
+      "AdaptiveConfigChangesOptOut": 0,
+      "UnsaveableScrollRemember": 0,
+      "AdaptivePaneScaffoldBanned": 0,
+      "MissingEnableEdgeToEdge": 0
+    },
+    "tracked_total": 0,
+    "other_issue_count": 5,
+    "severity_counts": {
+      "Warning": 5
+    }
+  },
+  "meta": {
+    "sample_kind": "reference_implementation_not_model",
+    "note": "hand-written demo, not a model session"
+  },
+  "limit": "Functional, visual, and security results are not inferred from lint XML."
+}

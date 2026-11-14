@@ -1,0 +1,5 @@
+legacy_with_baseline exit=0 seconds=1
+legacy_regression exit=1 seconds=2
+legacy_without_baseline exit=1 seconds=1
+legacy_with_temp_new_debt exit=1 seconds=2
+legacy_restored exit=0 seconds=1

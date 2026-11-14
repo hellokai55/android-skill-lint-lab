@@ -1,0 +1,5 @@
+suite,tests,failures,errors,skipped
+AdaptivePaneScaffoldDetectorTest,7,0,0,0
+ManifestAdaptationDetectorTest,9,0,0,0
+MissingEnableEdgeToEdgeDetectorTest,12,0,0,0
+UnsaveableScrollRememberDetectorTest,12,0,0,0

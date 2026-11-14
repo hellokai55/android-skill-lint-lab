@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 9.5.1" type="baseline" client="gradle" dependencies="false" name="AGP (9.5.1)" variant="all" version="9.5.1">
+
+    <issue
+        id="AdaptiveConfigChangesOptOut"
+        message="android:configChanges includes orientation, screenSize, screenLayout, smallestScreenSize. Those tokens opt the activity out of recreation on size, orientation, or density changes."
+        errorLine1="            android:configChanges=&quot;orientation|screenSize|screenLayout|smallestScreenSize&quot;>"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="13"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="AdaptivePaneScaffoldBanned"
+        message="ListDetailPaneScaffold is the pre-Navigation-3 adaptive scaffold. The frozen adaptive skill says to use a Navigation 3 SceneStrategy instead."
+        errorLine1="    ListDetailPaneScaffold("
+        errorLine2="    ^">
+        <location
+            file="src/main/java/com/example/movielab/legacy/LegacyActivity.kt"
+            line="39"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="AdaptiveScreenOrientationLock"
+        message="android:screenOrientation=&quot;portrait&quot; locks or overrides orientation. The frozen adaptive skill says not to add this attribute to escape adaptive recreation."
+        errorLine1="            android:screenOrientation=&quot;portrait&quot;"
+        errorLine2="                                       ~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="12"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="MissingEnableEdgeToEdge"
+        message="LegacyActivity never calls enableEdgeToEdge() from androidx.activity or WindowCompat. The frozen edge-to-edge skill requires that call in onCreate, before setContent."
+        errorLine1="class LegacyActivity : ComponentActivity() {"
+        errorLine2="      ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/movielab/legacy/LegacyActivity.kt"
+            line="27"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="UnsaveableScrollRemember"
+        message="remember of androidx.compose.foundation.lazy.LazyListState bypasses the scroll Saver. Use rememberLazyListState, rememberLazyGridState, rememberLazyStaggeredGridState, or rememberScrollState."
+        errorLine1="    val listState = remember { LazyListState() }"
+        errorLine2="                               ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/movielab/legacy/LegacyActivity.kt"
+            line="37"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="LockedOrientationActivity"
+        message="Expecting `android:screenOrientation=&quot;unspecified&quot;` or `&quot;fullSensor&quot;` for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices"
+        errorLine1="            android:screenOrientation=&quot;portrait&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="12"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Fixed screen orientations will be ignored in most cases, starting from Android 16. Android is moving toward a model where apps are expected to adapt to various orientations, display sizes, and aspect ratios."
+        errorLine1="            android:screenOrientation=&quot;portrait&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="12"
+            column="13"/>
+    </issue>
+
+</issues>

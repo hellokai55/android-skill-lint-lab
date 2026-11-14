@@ -1,0 +1,23 @@
+Observed Gradle lines from this workspace on 2026-11-14. Not estimated.
+
+checks:test after the detector sources compiled:
+BUILD SUCCESSFUL in 23s
+JUnit XML totals: AdaptivePaneScaffoldDetectorTest 7, ManifestAdaptationDetectorTest 9,
+MissingEnableEdgeToEdgeDetectorTest 12, UnsaveableScrollRememberDetectorTest 12.
+Sum 40, failures 0, errors 0.
+
+app assembleDebug + testDebugUnitTest + lintDebug, plus legacy and legacy-regression assembleDebug:
+BUILD SUCCESSFUL in 24s
+
+Later aggregate, with those outputs already up to date:
+./gradlew qualityGate
+BUILD SUCCESSFUL in 793ms
+qualityGate_exit=0
+
+legacy gate wall seconds printed by scripts/verify-legacy-gate.sh:
+legacy_with_baseline exit=0 seconds=1
+legacy_regression exit=1 seconds=2
+legacy_without_baseline exit=1 seconds=1
+legacy_with_temp_new_debt exit=1 seconds=2
+legacy_restored exit=0 seconds=1
+gate_ok=true
