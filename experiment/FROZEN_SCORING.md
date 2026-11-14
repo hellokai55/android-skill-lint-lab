@@ -50,6 +50,8 @@
 
 模板 `gradle/libs.versions.toml` sha256：`7cc477319760cd072fa6976c3b163b23fd21f0fda5df3641e1fa8c43cdcfba82`。
 
+模板 `app/src/main/java/com/example/movielab/MainActivity.kt` sha256：`411fadd8daf60ea1c16a9fa8b86adc5e44a8d9d3fd7cbf9c9677b2284b339026`。这个空骨架在 `setContent` 之前调用了 `enableEdgeToEdge()`，清单里没有方向锁，也没有滚动状态或旧双栏脚手架。这是可编译骨架，不是故意放进去的违规。若样本里该文件哈希仍是这个值，`MissingEnableEdgeToEdge` 的通过来自骨架，不能记成模型新写的行为。
+
 版本：AGP 9.5.1，Gradle 9.6.0，Kotlin 2.2.10，Compose BOM 2026.09.00，Navigation 3 1.2.1，adaptive 1.3.0，activity 1.13.0，kotlinx-serialization 1.9.0，compileSdk/targetSdk 37，minSdk 24。
 
 ## 怎么评一个样本提交
