@@ -1,0 +1,32 @@
+{
+  "sample_kind": "hand_constructed_baseline_gate",
+  "not_a_model_ab": true,
+  "commands": [
+    {
+      "name": "legacy_with_baseline",
+      "exit_code": 0,
+      "expect": 0
+    },
+    {
+      "name": "legacy_regression",
+      "exit_code": 1,
+      "expect": "nonzero"
+    },
+    {
+      "name": "legacy_without_baseline",
+      "exit_code": 1,
+      "expect": "nonzero"
+    },
+    {
+      "name": "legacy_with_temp_new_debt",
+      "exit_code": 1,
+      "expect": "nonzero"
+    },
+    {
+      "name": "legacy_restored",
+      "exit_code": 0,
+      "expect": 0
+    }
+  ],
+  "gate_ok": true
+}

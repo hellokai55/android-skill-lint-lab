@@ -1,0 +1,25 @@
+date=2026-11-14T15:08:20Z
+openjdk version "21.0.13.0.3" 2026-10-24
+OpenJDK Runtime Environment (build 21.0.13.0.3+1-1-24.04.1-Ubuntu)
+OpenJDK 64-Bit Server VM (build 21.0.13.0.3+1-1-24.04.1-Ubuntu, mixed mode, sharing)
+
+------------------------------------------------------------
+Gradle 9.6.0
+------------------------------------------------------------
+
+Build time:    2026-06-18 23:19:03 UTC
+Revision:      3f750f03d77e42327c5f9fcb9992110088330a32
+
+Kotlin:        2.3.21
+Groovy:        4.0.32
+Ant:           Apache Ant(TM) version 1.10.17 compiled on April 6 2026
+Launcher JVM:  21.0.13.0.3 (Ubuntu 21.0.13.0.3+1-1-24.04.1-Ubuntu)
+Daemon JVM:    /usr/lib/jvm/java-21-openjdk-amd64 (no Daemon JVM specified, using current Java home)
+OS:            Linux 6.12.113+ amd64
+
+ANDROID_HOME set=yes
+platforms=android-36 android-37.0 
+build_tools=36.0.0 
+qualityGate_exit=0
+qualityGate_seconds=0
+ALL_DONE qualityGate=0

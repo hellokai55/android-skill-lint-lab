@@ -1,0 +1,22 @@
+{
+  "sample_kind": "unknown",
+  "is_model_ab": false,
+  "counts": {
+    "lint_xml": "experiment/fixtures/parser-smoke-lint.xml",
+    "tracked_issue_counts": {
+      "AdaptiveScreenOrientationLock": 0,
+      "AdaptiveConfigChangesOptOut": 0,
+      "UnsaveableScrollRemember": 1,
+      "AdaptivePaneScaffoldBanned": 0,
+      "MissingEnableEdgeToEdge": 0
+    },
+    "tracked_total": 1,
+    "other_issue_count": 0,
+    "severity_counts": {
+      "Error": 1
+    }
+  },
+  "meta": {},
+  "limit": "Functional, visual, and security results are not inferred from lint XML.",
+  "warning": "sample_kind missing; do not cite this file as a model result"
+}

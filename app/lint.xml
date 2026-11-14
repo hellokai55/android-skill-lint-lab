@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- lifecycle-runtime ships a lint jar this AGP cannot load. Ignoring the meta-warning does not enable those checks. -->
+    <issue id="ObsoleteLintCustomCheck" severity="ignore" />
+    <!-- Lab rollout: registry default is warning; this module treats the mapped rules as errors. -->
+    <issue id="AdaptiveScreenOrientationLock" severity="error" />
+    <issue id="AdaptiveConfigChangesOptOut" severity="error" />
+    <issue id="UnsaveableScrollRemember" severity="error" />
+    <issue id="AdaptivePaneScaffoldBanned" severity="error" />
+    <issue id="MissingEnableEdgeToEdge" severity="error" />
+</lint>

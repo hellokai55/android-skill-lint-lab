@@ -1,0 +1,22 @@
+2026-11-14 emulator capture. Not a visual acceptance.
+
+Phone AVD movielab_phone: 1080x2400, density 420, system image android-36 aosp_atd, KVM after chmod 666 /dev/kvm.
+Boot completed in 27005 ms (first -no-window run) and 22409 ms (Xvfb run). log line: "Boot completed".
+adb install of app/build/outputs/apk/debug/app-debug.apk: Success.
+am start com.example.movielab/.MainActivity: Starting Intent.
+
+uiautomator dump /sdcard/phone-content.xml (27396 bytes) lists, among other nodes:
+- 本地片单
+- 搜索标题、类型或简介
+- 演示状态（本地，无网络）
+- 内容 / 加载 / 空 / 错误
+- 占位海报, PLACEHOLDER, 雾港夜车, 纸月亮信差, 盐湖来信, 静音教室, 北纬灯塔, 铜钥匙
+
+Framebuffer:
+- screencap with -no-window -gpu swiftshader_indirect: PNG 1080x2400, 15580 bytes, ImageMagick mean=0
+- same after KEYCODE_WAKEUP: still mean=0, 15580 bytes
+- reboot -gpu guest: still mean=0, 15580 bytes
+- Xvfb :99 without -no-window, import of the root window: center crop mean about 0.09
+
+These frames are not usable pictures of the app. Visual layout, edge-to-edge, dual-pane, rotation, and scroll restoration were not accepted.
+Tablet AVD was created (2560x1600, density 240, android-36 google_apis_tablet) and not booted, because the phone framebuffer was already black.

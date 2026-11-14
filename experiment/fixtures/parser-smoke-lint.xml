@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PARSER FIXTURE. Not a lint run, not a model sample, not a result. -->
+<issues format="6" by="lint">
+    <issue id="UnsaveableScrollRemember" severity="Error" message="fixture only" />
+</issues>

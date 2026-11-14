@@ -1,0 +1,25 @@
+{
+  "sample_kind": "hand_constructed_new_debt",
+  "is_model_ab": false,
+  "counts": {
+    "lint_xml": "legacy-regression/build/reports/lint-results-debug.xml",
+    "tracked_issue_counts": {
+      "AdaptiveScreenOrientationLock": 0,
+      "AdaptiveConfigChangesOptOut": 0,
+      "UnsaveableScrollRemember": 1,
+      "AdaptivePaneScaffoldBanned": 0,
+      "MissingEnableEdgeToEdge": 0
+    },
+    "tracked_total": 1,
+    "other_issue_count": 1,
+    "severity_counts": {
+      "Error": 1,
+      "Warning": 1
+    }
+  },
+  "meta": {
+    "sample_kind": "hand_constructed_new_debt",
+    "note": "expected lint failure, not a model session"
+  },
+  "limit": "Functional, visual, and security results are not inferred from lint XML."
+}

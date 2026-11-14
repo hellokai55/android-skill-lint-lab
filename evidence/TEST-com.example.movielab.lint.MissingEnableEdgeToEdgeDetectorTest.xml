@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-11-14T15:00:16.581Z" hostname="cursor" time="9.51">
+  <properties/>
+  <testcase name="callAfterSetContentIsReported" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="1.573"/>
+  <testcase name="windowCompatCallIsClean" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="0.63"/>
+  <testcase name="superclassSourceCountsWhenSuperIsCalled" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="0.611"/>
+  <testcase name="componentActivityExtensionBeforeSetContentIsClean" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="0.629"/>
+  <testcase name="importedAliasOfEnableIsClean" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="0.615"/>
+  <testcase name="missingCallIsReported" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="1.176"/>
+  <testcase name="localFunctionWithTheSameNameDoesNotCount" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="1.04"/>
+  <testcase name="abstractActivityIsNotReported" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="0.532"/>
+  <testcase name="skippingSuperDoesNotInheritTheCall" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="0.975"/>
+  <testcase name="suppressIsClean" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="0.555"/>
+  <testcase name="setDecorFitsSystemWindowsDoesNotCount" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="0.59"/>
+  <testcase name="sameClassHelperCalledBeforeSetContentIsClean" classname="com.example.movielab.lint.MissingEnableEdgeToEdgeDetectorTest" time="0.551"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

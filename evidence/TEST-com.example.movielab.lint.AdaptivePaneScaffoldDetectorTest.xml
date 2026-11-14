@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.movielab.lint.AdaptivePaneScaffoldDetectorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-14T15:00:14.026Z" hostname="cursor" time="2.4">
+  <properties/>
+  <testcase name="listDetailPaneScaffoldCallIsReported" classname="com.example.movielab.lint.AdaptivePaneScaffoldDetectorTest" time="0.433"/>
+  <testcase name="supportingPaneScaffoldCallIsReported" classname="com.example.movielab.lint.AdaptivePaneScaffoldDetectorTest" time="0.38"/>
+  <testcase name="sceneStrategyApisAreClean" classname="com.example.movielab.lint.AdaptivePaneScaffoldDetectorTest" time="0.7"/>
+  <testcase name="sameNameInAnotherPackageIsClean" classname="com.example.movielab.lint.AdaptivePaneScaffoldDetectorTest" time="0.126"/>
+  <testcase name="suppressIsClean" classname="com.example.movielab.lint.AdaptivePaneScaffoldDetectorTest" time="0.213"/>
+  <testcase name="importedAliasIsReported" classname="com.example.movielab.lint.AdaptivePaneScaffoldDetectorTest" time="0.272"/>
+  <testcase name="defaultsHelperIsClean" classname="com.example.movielab.lint.AdaptivePaneScaffoldDetectorTest" time="0.276"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

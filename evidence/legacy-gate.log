@@ -1,0 +1,481 @@
+> Task :checks:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :legacy:preBuild UP-TO-DATE
+> Task :legacy:preDebugBuild UP-TO-DATE
+> Task :legacy:generateDebugResources UP-TO-DATE
+> Task :legacy:packageDebugResources UP-TO-DATE
+> Task :checks:compileKotlin UP-TO-DATE
+> Task :checks:compileJava NO-SOURCE
+> Task :checks:processResources UP-TO-DATE
+> Task :checks:classes UP-TO-DATE
+> Task :checks:jar UP-TO-DATE
+> Task :legacy:processDebugNavigationResources UP-TO-DATE
+> Task :legacy:parseDebugLocalResources UP-TO-DATE
+> Task :legacy:generateDebugRFile UP-TO-DATE
+> Task :legacy:compileDebugKotlin UP-TO-DATE
+> Task :legacy:javaPreCompileDebug UP-TO-DATE
+> Task :legacy:compileDebugJavaWithJavac NO-SOURCE
+> Task :legacy:checkDebugAarMetadata UP-TO-DATE
+> Task :legacy:mapDebugSourceSetPaths UP-TO-DATE
+> Task :legacy:compileDebugNavigationResources UP-TO-DATE
+> Task :legacy:mergeDebugResources UP-TO-DATE
+> Task :legacy:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :legacy:extractDeepLinksDebug UP-TO-DATE
+> Task :legacy:processDebugMainManifest UP-TO-DATE
+> Task :legacy:processDebugManifest UP-TO-DATE
+> Task :legacy:processDebugManifestForPackage UP-TO-DATE
+> Task :legacy:processDebugResources UP-TO-DATE
+> Task :legacy:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :legacy:preDebugAndroidTestBuild SKIPPED
+> Task :legacy:generateDebugAndroidTestLintModel UP-TO-DATE
+> Task :legacy:extractProguardFiles UP-TO-DATE
+> Task :legacy:generateDebugLintReportModel UP-TO-DATE
+> Task :legacy:preDebugUnitTestBuild UP-TO-DATE
+> Task :legacy:generateDebugUnitTestLintModel UP-TO-DATE
+> Task :legacy:lintAnalyzeDebug UP-TO-DATE
+> Task :legacy:lintAnalyzeDebugAndroidTest UP-TO-DATE
+> Task :legacy:lintAnalyzeDebugUnitTest UP-TO-DATE
+> Task :legacy:lintReportDebug UP-TO-DATE
+> Task :legacy:lintDebug
+
+BUILD SUCCESSFUL in 643ms
+30 actionable tasks: 1 executed, 29 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.6.0/userguide/configuration_cache_enabling.html
+legacy_with_baseline exit=0 seconds=1
+> Task :checks:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :legacy-regression:preBuild UP-TO-DATE
+> Task :legacy-regression:preDebugBuild UP-TO-DATE
+> Task :legacy-regression:generateDebugResources UP-TO-DATE
+> Task :legacy-regression:packageDebugResources UP-TO-DATE
+> Task :checks:compileKotlin UP-TO-DATE
+> Task :checks:compileJava NO-SOURCE
+> Task :checks:processResources UP-TO-DATE
+> Task :checks:classes UP-TO-DATE
+> Task :checks:jar UP-TO-DATE
+> Task :legacy-regression:processDebugNavigationResources UP-TO-DATE
+> Task :legacy-regression:parseDebugLocalResources UP-TO-DATE
+> Task :legacy-regression:generateDebugRFile UP-TO-DATE
+> Task :legacy-regression:compileDebugKotlin UP-TO-DATE
+> Task :legacy-regression:javaPreCompileDebug UP-TO-DATE
+> Task :legacy-regression:compileDebugJavaWithJavac NO-SOURCE
+> Task :legacy-regression:checkDebugAarMetadata UP-TO-DATE
+> Task :legacy-regression:mapDebugSourceSetPaths UP-TO-DATE
+> Task :legacy-regression:compileDebugNavigationResources UP-TO-DATE
+> Task :legacy-regression:mergeDebugResources UP-TO-DATE
+> Task :legacy-regression:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :legacy-regression:extractDeepLinksDebug UP-TO-DATE
+> Task :legacy-regression:processDebugMainManifest
+> Task :legacy-regression:processDebugManifest
+> Task :legacy-regression:preDebugAndroidTestBuild SKIPPED
+> Task :legacy-regression:extractProguardFiles UP-TO-DATE
+> Task :legacy-regression:generateDebugLintReportModel
+> Task :legacy-regression:preDebugUnitTestBuild UP-TO-DATE
+> Task :legacy-regression:processDebugManifestForPackage
+> Task :legacy-regression:processDebugResources
+> Task :legacy-regression:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :legacy-regression:generateDebugAndroidTestLintModel
+> Task :legacy-regression:generateDebugUnitTestLintModel
+> Task :legacy-regression:lintAnalyzeDebugAndroidTest
+> Task :legacy-regression:lintAnalyzeDebugUnitTest
+> Task :legacy-regression:lintAnalyzeDebug
+
+> Task :legacy-regression:lintReportDebug
+Wrote HTML report to file:///workspace/legacy-regression/build/reports/lint-results-debug.html
+Wrote SARIF report to file:///workspace/legacy-regression/build/reports/lint-results-debug.sarif
+Lint found 1 error and 1 warning. First failure:
+/workspace/legacy-regression/src/main/java/com/example/movielab/legacyregression/NewDebtActivity.kt:29: Error: remember of androidx.compose.foundation.ScrollState bypasses the scroll Saver. Use rememberLazyListState, rememberLazyGridState, rememberLazyStaggeredGridState, or rememberScrollState. [UnsaveableScrollRemember from com.example.movielab:checks]
+    val scroll = remember { ScrollState(0) }
+                            ~~~~~~~~~~~~~~
+
+
+> Task :legacy-regression:lintDebug FAILED
+Lint found 1 error, 1 warning. First failure:
+
+/workspace/legacy-regression/src/main/java/com/example/movielab/legacyregression/NewDebtActivity.kt:29: Error: remember of androidx.compose.foundation.ScrollState bypasses the scroll Saver. Use rememberLazyListState, rememberLazyGridState, rememberLazyStaggeredGridState, or rememberScrollState. [UnsaveableScrollRemember from com.example.movielab:checks]
+    val scroll = remember { ScrollState(0) }
+                            ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnsaveableScrollRemember":
+   The frozen adaptive skill says plain remember { LazyListState() }, remember
+   { LazyGridState() }, and remember { ScrollState(...) } do not save scroll
+   position across configuration changes, because they bypass the state class
+   Saver.
+
+   Replacements named by the skill: rememberLazyListState(),
+   rememberLazyGridState(), rememberLazyStaggeredGridState(),
+   rememberScrollState().
+
+   rememberSaveable { LazyListState() } without an explicit saver argument is
+   also reported. An explicit saver = argument is not reported; this check
+   does not validate that the saver is correct. A factory that hides the
+   constructor, such as remember { freshListState() }, is not reported.
+
+   Same simple names in another package are not reported. Resolution is
+   required; an unresolved call is not reported.
+
+   Frozen reference: android/skills v1.0.21, commit
+   5815d27fda564aa9f07ebdcb5e57ed3e8d904e0d. Vendored under
+   third_party/android-skills. This check is a lab mapping, not an upstream
+   lint rule.
+   Source: jetpack-compose/adaptive/SKILL.md, Step 6.2.
+
+   Vendor: android-skill-lint-lab
+   Identifier: com.example.movielab:checks
+   Feedback: https://github.com/hellokai55/android-skill-lint-lab
+
+
+The full lint text report is located at:
+  /workspace/legacy-regression/build/intermediates/lint_intermediate_text_report/debug/lintReportDebug/lint-results-debug.txt
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':legacy-regression:lintDebug' (registered by plugin 'com.android.internal.application').
+> Lint found errors in the project; aborting build.
+  
+  Fix the issues identified by lint, or create a baseline to see only new errors.
+  To create a baseline, run `gradlew updateLintBaseline` after adding the following to the module's build.gradle file:
+  ```
+  android {
+      lint {
+          baseline = file("lint-baseline.xml")
+      }
+  }
+  ```
+  For more details, see https://developer.android.com/studio/write/lint#snapshot
+  
+  Lint found 1 error, 1 warning. First failure:
+  
+  /workspace/legacy-regression/src/main/java/com/example/movielab/legacyregression/NewDebtActivity.kt:29: Error: remember of androidx.compose.foundation.ScrollState bypasses the scroll Saver. Use rememberLazyListState, rememberLazyGridState, rememberLazyStaggeredGridState, or rememberScrollState. [UnsaveableScrollRemember from com.example.movielab:checks]
+      val scroll = remember { ScrollState(0) }
+                              ~~~~~~~~~~~~~~
+  
+     Explanation for issues of type "UnsaveableScrollRemember":
+     The frozen adaptive skill says plain remember { LazyListState() }, remember
+     { LazyGridState() }, and remember { ScrollState(...) } do not save scroll
+     position across configuration changes, because they bypass the state class
+     Saver.
+  
+     Replacements named by the skill: rememberLazyListState(),
+     rememberLazyGridState(), rememberLazyStaggeredGridState(),
+     rememberScrollState().
+  
+     rememberSaveable { LazyListState() } without an explicit saver argument is
+     also reported. An explicit saver = argument is not reported; this check
+     does not validate that the saver is correct. A factory that hides the
+     constructor, such as remember { freshListState() }, is not reported.
+  
+     Same simple names in another package are not reported. Resolution is
+     required; an unresolved call is not reported.
+  
+     Frozen reference: android/skills v1.0.21, commit
+     5815d27fda564aa9f07ebdcb5e57ed3e8d904e0d. Vendored under
+     third_party/android-skills. This check is a lab mapping, not an upstream
+     lint rule.
+     Source: jetpack-compose/adaptive/SKILL.md, Step 6.2.
+  
+     Vendor: android-skill-lint-lab
+     Identifier: com.example.movielab:checks
+     Feedback: https://github.com/hellokai55/android-skill-lint-lab
+  
+  
+  The full lint text report is located at:
+    /workspace/legacy-regression/build/intermediates/lint_intermediate_text_report/debug/lintReportDebug/lint-results-debug.txt
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1s
+30 actionable tasks: 12 executed, 18 up-to-date
+legacy_regression exit=1 seconds=2
+> Task :checks:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :legacy:preBuild UP-TO-DATE
+> Task :legacy:preDebugBuild UP-TO-DATE
+> Task :legacy:generateDebugResources UP-TO-DATE
+> Task :legacy:packageDebugResources UP-TO-DATE
+> Task :checks:compileKotlin UP-TO-DATE
+> Task :checks:compileJava NO-SOURCE
+> Task :checks:processResources UP-TO-DATE
+> Task :checks:classes UP-TO-DATE
+> Task :legacy:processDebugNavigationResources UP-TO-DATE
+> Task :checks:jar UP-TO-DATE
+> Task :legacy:parseDebugLocalResources UP-TO-DATE
+> Task :legacy:generateDebugRFile UP-TO-DATE
+> Task :legacy:compileDebugKotlin UP-TO-DATE
+> Task :legacy:javaPreCompileDebug UP-TO-DATE
+> Task :legacy:compileDebugJavaWithJavac NO-SOURCE
+> Task :legacy:checkDebugAarMetadata UP-TO-DATE
+> Task :legacy:mapDebugSourceSetPaths UP-TO-DATE
+> Task :legacy:compileDebugNavigationResources UP-TO-DATE
+> Task :legacy:mergeDebugResources UP-TO-DATE
+> Task :legacy:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :legacy:extractDeepLinksDebug UP-TO-DATE
+> Task :legacy:processDebugMainManifest UP-TO-DATE
+> Task :legacy:processDebugManifest UP-TO-DATE
+> Task :legacy:processDebugManifestForPackage UP-TO-DATE
+> Task :legacy:processDebugResources UP-TO-DATE
+> Task :legacy:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :legacy:preDebugAndroidTestBuild SKIPPED
+> Task :legacy:generateDebugAndroidTestLintModel
+> Task :legacy:extractProguardFiles UP-TO-DATE
+> Task :legacy:generateDebugLintReportModel
+> Task :legacy:preDebugUnitTestBuild UP-TO-DATE
+> Task :legacy:generateDebugUnitTestLintModel
+> Task :legacy:lintAnalyzeDebug UP-TO-DATE
+> Task :legacy:lintAnalyzeDebugAndroidTest UP-TO-DATE
+> Task :legacy:lintAnalyzeDebugUnitTest UP-TO-DATE
+
+> Task :legacy:lintReportDebug
+Wrote HTML report to file:///workspace/legacy/build/reports/lint-results-debug.html
+Wrote SARIF report to file:///workspace/legacy/build/reports/lint-results-debug.sarif
+Lint found 5 errors, 2 warnings
+Created baseline file /workspace/legacy/lint-baseline.xml
+
+Also breaking the build in case this was not intentional. If you
+deliberately created the baseline file, re-run the build and this
+time it should succeed without warnings.
+
+If not, investigate the baseline path in the lintOptions config
+or verify that the baseline file has been checked into version
+control.
+
+You can run lint with -Dlint.baselines.continue=true
+if you want to create many missing baselines in one go.
+            
+
+> Task :legacy:lintDebug FAILED
+Lint found 5 errors, 2 warnings. First failure:
+
+/workspace/legacy/src/main/AndroidManifest.xml:13: Error: android:configChanges includes orientation, screenSize, screenLayout, smallestScreenSize. Those tokens opt the activity out of recreation on size, orientation, or density changes. [AdaptiveConfigChangesOptOut from com.example.movielab:checks]
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize">
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AdaptiveConfigChangesOptOut":
+   The frozen adaptive skill says never to add android:configChanges to
+   suppress Activity recreation. Opting out hides state-loss bugs and skips
+   adaptive resource reload.
+
+   To limit false positives, only these tokens are reported: orientation,
+   screenSize, screenLayout, smallestScreenSize, density. Other tokens such as
+   keyboard, locale, fontScale, and uiMode are not reported. That is narrower
+   than the skill's absolute wording. Unknown tokens are not reported either.
+
+   Frozen reference: android/skills v1.0.21, commit
+   5815d27fda564aa9f07ebdcb5e57ed3e8d904e0d. Vendored under
+   third_party/android-skills. This check is a lab mapping, not an upstream
+   lint rule.
+   Source: jetpack-compose/adaptive/SKILL.md, Step 6.
+
+   Vendor: android-skill-lint-lab
+   Identifier: com.example.movielab:checks
+   Feedback: https://github.com/hellokai55/android-skill-lint-lab
+
+
+The full lint text report is located at:
+  /workspace/legacy/build/intermediates/lint_intermediate_text_report/debug/lintReportDebug/lint-results-debug.txt
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':legacy:lintDebug' (registered by plugin 'com.android.internal.application').
+> Aborting build since new baseline file was created
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 693ms
+30 actionable tasks: 5 executed, 25 up-to-date
+legacy_without_baseline exit=1 seconds=1
+> Task :legacy:preBuild UP-TO-DATE
+> Task :checks:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :legacy:preDebugBuild UP-TO-DATE
+> Task :legacy:generateDebugResources UP-TO-DATE
+> Task :legacy:packageDebugResources UP-TO-DATE
+> Task :checks:compileKotlin UP-TO-DATE
+> Task :checks:compileJava NO-SOURCE
+> Task :checks:processResources UP-TO-DATE
+> Task :legacy:processDebugNavigationResources UP-TO-DATE
+> Task :checks:classes UP-TO-DATE
+> Task :checks:jar UP-TO-DATE
+> Task :legacy:parseDebugLocalResources UP-TO-DATE
+> Task :legacy:generateDebugRFile UP-TO-DATE
+> Task :legacy:javaPreCompileDebug UP-TO-DATE
+> Task :legacy:checkDebugAarMetadata UP-TO-DATE
+> Task :legacy:mapDebugSourceSetPaths UP-TO-DATE
+> Task :legacy:compileDebugNavigationResources UP-TO-DATE
+> Task :legacy:mergeDebugResources UP-TO-DATE
+> Task :legacy:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :legacy:extractDeepLinksDebug UP-TO-DATE
+> Task :legacy:processDebugMainManifest UP-TO-DATE
+> Task :legacy:processDebugManifest UP-TO-DATE
+> Task :legacy:processDebugManifestForPackage UP-TO-DATE
+> Task :legacy:processDebugResources UP-TO-DATE
+> Task :legacy:preDebugAndroidTestBuild SKIPPED
+> Task :legacy:extractProguardFiles UP-TO-DATE
+> Task :legacy:preDebugUnitTestBuild UP-TO-DATE
+> Task :legacy:compileDebugKotlin
+> Task :legacy:compileDebugJavaWithJavac NO-SOURCE
+> Task :legacy:bundleDebugClassesToCompileJar
+> Task :legacy:generateDebugLintReportModel
+> Task :legacy:generateDebugAndroidTestLintModel
+> Task :legacy:generateDebugUnitTestLintModel
+> Task :legacy:lintAnalyzeDebugUnitTest
+> Task :legacy:lintAnalyzeDebugAndroidTest
+> Task :legacy:lintAnalyzeDebug
+
+> Task :legacy:lintReportDebug
+Wrote HTML report to file:///workspace/legacy/build/reports/lint-results-debug.html
+Wrote SARIF report to file:///workspace/legacy/build/reports/lint-results-debug.sarif
+Lint found 1 error, 1 warning (and 5 errors and 2 warnings filtered by baseline lint-baseline.xml)
+Lint found 1 error and 1 warning. First failure:
+/workspace/legacy/src/main/java/com/example/movielab/legacy/TempNewDebt.kt:9: Error: remember of androidx.compose.foundation.ScrollState bypasses the scroll Saver. Use rememberLazyListState, rememberLazyGridState, rememberLazyStaggeredGridState, or rememberScrollState. [UnsaveableScrollRemember from com.example.movielab:checks]
+    val state = remember { ScrollState(0) }
+                           ~~~~~~~~~~~~~~
+
+
+> Task :legacy:lintDebug FAILED
+Lint found 1 error, 1 warning (and 5 errors, 2 warnings filtered by baseline lint-baseline.xml). First failure:
+
+/workspace/legacy/src/main/java/com/example/movielab/legacy/TempNewDebt.kt:9: Error: remember of androidx.compose.foundation.ScrollState bypasses the scroll Saver. Use rememberLazyListState, rememberLazyGridState, rememberLazyStaggeredGridState, or rememberScrollState. [UnsaveableScrollRemember from com.example.movielab:checks]
+    val state = remember { ScrollState(0) }
+                           ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnsaveableScrollRemember":
+   The frozen adaptive skill says plain remember { LazyListState() }, remember
+   { LazyGridState() }, and remember { ScrollState(...) } do not save scroll
+   position across configuration changes, because they bypass the state class
+   Saver.
+
+   Replacements named by the skill: rememberLazyListState(),
+   rememberLazyGridState(), rememberLazyStaggeredGridState(),
+   rememberScrollState().
+
+   rememberSaveable { LazyListState() } without an explicit saver argument is
+   also reported. An explicit saver = argument is not reported; this check
+   does not validate that the saver is correct. A factory that hides the
+   constructor, such as remember { freshListState() }, is not reported.
+
+   Same simple names in another package are not reported. Resolution is
+   required; an unresolved call is not reported.
+
+   Frozen reference: android/skills v1.0.21, commit
+   5815d27fda564aa9f07ebdcb5e57ed3e8d904e0d. Vendored under
+   third_party/android-skills. This check is a lab mapping, not an upstream
+   lint rule.
+   Source: jetpack-compose/adaptive/SKILL.md, Step 6.2.
+
+   Vendor: android-skill-lint-lab
+   Identifier: com.example.movielab:checks
+   Feedback: https://github.com/hellokai55/android-skill-lint-lab
+
+
+The full lint text report is located at:
+  /workspace/legacy/build/intermediates/lint_intermediate_text_report/debug/lintReportDebug/lint-results-debug.txt
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':legacy:lintDebug' (registered by plugin 'com.android.internal.application').
+> Lint found errors in the project; aborting build.
+  
+  Fix the issues identified by lint, or add the issues to the lint baseline via `gradlew updateLintBaseline`.
+  For more details, see https://developer.android.com/studio/write/lint#snapshot
+  
+  Lint found 1 error, 1 warning (and 5 errors, 2 warnings filtered by baseline lint-baseline.xml). First failure:
+  
+  /workspace/legacy/src/main/java/com/example/movielab/legacy/TempNewDebt.kt:9: Error: remember of androidx.compose.foundation.ScrollState bypasses the scroll Saver. Use rememberLazyListState, rememberLazyGridState, rememberLazyStaggeredGridState, or rememberScrollState. [UnsaveableScrollRemember from com.example.movielab:checks]
+      val state = remember { ScrollState(0) }
+                             ~~~~~~~~~~~~~~
+  
+     Explanation for issues of type "UnsaveableScrollRemember":
+     The frozen adaptive skill says plain remember { LazyListState() }, remember
+     { LazyGridState() }, and remember { ScrollState(...) } do not save scroll
+     position across configuration changes, because they bypass the state class
+     Saver.
+  
+     Replacements named by the skill: rememberLazyListState(),
+     rememberLazyGridState(), rememberLazyStaggeredGridState(),
+     rememberScrollState().
+  
+     rememberSaveable { LazyListState() } without an explicit saver argument is
+     also reported. An explicit saver = argument is not reported; this check
+     does not validate that the saver is correct. A factory that hides the
+     constructor, such as remember { freshListState() }, is not reported.
+  
+     Same simple names in another package are not reported. Resolution is
+     required; an unresolved call is not reported.
+  
+     Frozen reference: android/skills v1.0.21, commit
+     5815d27fda564aa9f07ebdcb5e57ed3e8d904e0d. Vendored under
+     third_party/android-skills. This check is a lab mapping, not an upstream
+     lint rule.
+     Source: jetpack-compose/adaptive/SKILL.md, Step 6.2.
+  
+     Vendor: android-skill-lint-lab
+     Identifier: com.example.movielab:checks
+     Feedback: https://github.com/hellokai55/android-skill-lint-lab
+  
+  
+  The full lint text report is located at:
+    /workspace/legacy/build/intermediates/lint_intermediate_text_report/debug/lintReportDebug/lint-results-debug.txt
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 2s
+30 actionable tasks: 10 executed, 20 up-to-date
+legacy_with_temp_new_debt exit=1 seconds=2
+> Task :checks:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :legacy:preBuild UP-TO-DATE
+> Task :legacy:preDebugBuild UP-TO-DATE
+> Task :legacy:generateDebugResources UP-TO-DATE
+> Task :legacy:packageDebugResources UP-TO-DATE
+> Task :checks:compileKotlin UP-TO-DATE
+> Task :checks:compileJava NO-SOURCE
+> Task :checks:processResources UP-TO-DATE
+> Task :checks:classes UP-TO-DATE
+> Task :checks:jar UP-TO-DATE
+> Task :legacy:processDebugNavigationResources UP-TO-DATE
+> Task :legacy:parseDebugLocalResources UP-TO-DATE
+> Task :legacy:generateDebugRFile UP-TO-DATE
+> Task :legacy:compileDebugKotlin FROM-CACHE
+> Task :legacy:javaPreCompileDebug UP-TO-DATE
+> Task :legacy:compileDebugJavaWithJavac NO-SOURCE
+> Task :legacy:checkDebugAarMetadata UP-TO-DATE
+> Task :legacy:mapDebugSourceSetPaths UP-TO-DATE
+> Task :legacy:compileDebugNavigationResources UP-TO-DATE
+> Task :legacy:mergeDebugResources UP-TO-DATE
+> Task :legacy:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :legacy:extractDeepLinksDebug UP-TO-DATE
+> Task :legacy:processDebugMainManifest UP-TO-DATE
+> Task :legacy:processDebugManifest UP-TO-DATE
+> Task :legacy:processDebugManifestForPackage UP-TO-DATE
+> Task :legacy:processDebugResources UP-TO-DATE
+> Task :legacy:preDebugAndroidTestBuild SKIPPED
+> Task :legacy:extractProguardFiles UP-TO-DATE
+> Task :legacy:bundleDebugClassesToCompileJar
+> Task :legacy:generateDebugLintReportModel
+> Task :legacy:generateDebugAndroidTestLintModel
+> Task :legacy:preDebugUnitTestBuild UP-TO-DATE
+> Task :legacy:generateDebugUnitTestLintModel
+> Task :legacy:lintAnalyzeDebug FROM-CACHE
+> Task :legacy:lintAnalyzeDebugAndroidTest FROM-CACHE
+> Task :legacy:lintAnalyzeDebugUnitTest FROM-CACHE
+
+> Task :legacy:lintReportDebug
+Lint found no new issues (and 5 errors and 2 warnings filtered by baseline lint-baseline.xml)
+
+> Task :legacy:lintDebug
+
+BUILD SUCCESSFUL in 711ms
+30 actionable tasks: 6 executed, 4 from cache, 20 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.6.0/userguide/configuration_cache_enabling.html
+legacy_restored exit=0 seconds=1
