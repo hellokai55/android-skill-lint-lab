@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">电影列表</string>
+    <string name="movie_list_title">电影</string>
+    <string name="movie_list_subtitle">本地片单，这不是真实海报</string>
+    <string name="detail_title_placeholder">电影详情</string>
+    <string name="detail_placeholder">从列表选择一部电影</string>
+    <string name="back">返回</string>
+    <string name="poster_label">这不是真实海报</string>
+    <string name="poster_description">本地绘制的占位图，这不是真实海报</string>
+    <string name="status_ready">有片单</string>
+    <string name="status_loading">加载中</string>
+    <string name="status_empty">空片单</string>
+    <string name="status_error">加载失败</string>
+    <string name="loading_message">正在加载片单</string>
+    <string name="empty_message">片单是空的</string>
+    <string name="error_message">片单加载失败</string>
+    <string name="error_detail">这是本地可复现的错误，没有访问网络。</string>
+    <string name="offline_note">加载、空片单和失败都可以在这里切换，不需要网络。</string>
+    <string name="retry">重试</string>
+    <string name="missing_movie">找不到这部电影</string>
+    <string name="detail_meta">%1$d 年 · %2$d 分钟 · 评分 %3$s</string>
+    <string name="detail_director">导演 %1$s</string>
+    <string name="detail_genres">类型 %1$s</string>
+    <string name="detail_poster_note">海报是在设备上画出来的占位图，这不是真实海报。</string>
+</resources>
